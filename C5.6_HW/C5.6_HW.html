@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C5.6_HW</title>
+</head>
+<body>
+    <h1>Http-запрос с помощью fetch</h1>
+    <p>
+        Напишите код приложения, интерфейс которого представляет собой 2 input и кнопку. В input можно ввести любое число. 
+        При клике на кнопку происходит следующее:<br>
+
+        1. Если оба числа не попадают в диапазон от 100 до 300 или введено не число — выводить ниже текст «одно из чисел вне 
+        диапазона от 100 до 300»;<br>
+        2. Если числа попадают в диапазон от 100 до 300 — сделать запрос c помощью fetch по URL <a href="https://picsum.photos/200/300">
+        https://picsum.photos/200/300</a>, где первое число — ширина картинки, второе — высота.<br><br>
+        После получения данных вывести ниже картинку на экран.
+
+    </p>
+
+    <label for="input-width">Введите ширину картинки:</label>
+    <input type="number" class="input j-input-width" id="input-width" style="display: block; margin-top: 10px;" required>
+
+    <label for="input-height">Введите высоту картинки:</label>
+    <input type="number" class="input j-input-height" id="input-height" style="display: block; margin-top: 10px;" required>
+
+    <button class="btn j-btn" style="display: block; margin-top: 10px;">Отправить запрос</button>
+
+    <div class="result-wrap">
+        <p>Здесь будет результат запроса: картинка с заданной шириной и высотой:</p>
+        <div class="result"></div>
+    </div>
+
+    <a href="../index.html">На главную</a>
+
+    <script src="C5.6_HW.js" type="text/javascript"></script>
+</body>
+</html>

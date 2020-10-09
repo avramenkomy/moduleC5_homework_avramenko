@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С5.3 XHR</title>
+</head>
+<body>
+    <h1>Работа с XHR-запросами</h1>
+    <p>
+        Напишите код приложения, интерфейс которого представляет собой input и кнопку. В input можно ввести любое число. 
+        При клике на кнопку происходит следующее:<br>
+
+        1. Если число не попадает в диапазон от 1 до 10 — выводить ниже текст «число вне диапазона от 1 до 10».<br>
+        2. Если число попадает в диапазон от 1 до 10 — сделать запрос c помощью XHR по URL 
+        <a href="https://picsum.photos/v2/list?limit=10">https://picsum.photos/v2/list?limit=10</a>, 
+        где get-параметр limit — это введённое число.<br><br>
+
+        После получения данных вывести ниже картинку на экран.
+    </p>
+
+    <input class="input" type="number" required>
+    <button class="btn j-btn">Запрос</button>
+    <div>Результат тут:</div>
+    <div class="result j-result"></div>
+
+    <br>
+    <a href="../index.html">На главную</a>
+
+    <script src="C5.3.3_HW.js" type="text/javascript"></script>
+</body>
+</html>

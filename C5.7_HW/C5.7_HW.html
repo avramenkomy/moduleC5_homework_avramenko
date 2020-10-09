@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C5.7 Финальное задание</title>
+</head>
+<body>
+    <h1>Финальное задание</h1>
+    <p>
+        Написать код приложения, интерфейс которого состоит из двух input и кнопки. В input можно ввести любое число.<br>
+        Заголовок первого input — «номер страницы».<br>
+        Заголовок второго input — «лимит».<br>
+        Заголовок кнопки — «запрос».<br><br>
+        При клике на кнопку происходит следующее:<br><br>
+        1. Если число в первом input не попадает в диапазон от 1 до 10 или не является числом — 
+        выводить ниже текст «Номер страницы вне диапазона от 1 до 10»;<br>
+        2. Если число во втором input не попадает в диапазон от 1 до 10 или не является числом — 
+        выводить ниже текст «Лимит вне диапазона от 1 до 10»;<br>
+        3. Если и первый, и второй input не в диапазонах или не являются числами — 
+        выводить ниже текст «Номер страницы и лимит вне диапазона от 1 до 10»;<br>
+        4. Если числа попадают в диапазон от 1 до 10 — сделать запрос по URL 
+        <a href="https://picsum.photos/v2/list?page=1&limit=10">https://picsum.photos/v2/list?page=1&limit=10</a>, 
+        где GET-параметр page — это число из первого input, а GET-параметр limit — это введённое число второго input.<br><br>
+        После получения данных вывести список картинок на экран.<br><br>
+        <i>Если пользователь перезагрузил страницу, то ему должны показываться картинки из последнего успешно 
+            выполненного запроса (использовать localStorage).</i>
+    </p>
+    <p>Данные выводятся на страницу и консоль</p>
+    <p><b>Решение:</b></p>
+
+    <label for="page-number">Номер страницы:</label>
+    <input type="text" id="page-number" class="j-input-page-number" style="display: block;">
+
+    <label for="limit">Лимит:</label>
+    <input type="text" id="limit" class="j-input-limit" style="display: block;">
+
+    <button class="btn j-btn" style="margin-top: 20px; display: block;">Запрос</button>
+
+    <button class="btn j-btn-watch-localStorage" style="margin-top: 20px;">Посмотреть localStorage</button>
+    <button class="btn j-btn-clear" style="margin-top: 20px;">Очистить localStorage</button>
+
+    <div class="result-wrap">
+        <p>Вывод результата запроса:</p>
+        <div class="result"></div>
+    </div>
+
+    <a href="../index.html">На главную</a>
+
+    <script src="C5.7_HW.js" type="text/javascript"></script>
+</body>
+</html>
